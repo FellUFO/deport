@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rft.deport.dao.LocationMapper" >
+  <resultMap id="BaseResultMap" type="com.rft.deport.entity.Location" >
+    <id column="location_number" property="locationNumber" jdbcType="VARCHAR" />
+    <result column="note" property="note" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    location_number, note
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from location
+    where location_number = #{locationNumber,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from location
+    where location_number = #{locationNumber,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.rft.deport.entity.Location" >
+    insert into location (location_number, note)
+    values (#{locationNumber,jdbcType=VARCHAR}, #{note,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.rft.deport.entity.Location" >
+    insert into location
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="locationNumber != null" >
+        location_number,
+      </if>
+      <if test="note != null" >
+        note,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="locationNumber != null" >
+        #{locationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null" >
+        #{note,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.rft.deport.entity.Location" >
+    update location
+    <set >
+      <if test="note != null" >
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where location_number = #{locationNumber,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.rft.deport.entity.Location" >
+    update location
+    set note = #{note,jdbcType=VARCHAR}
+    where location_number = #{locationNumber,jdbcType=VARCHAR}
+  </update>
+</mapper>
