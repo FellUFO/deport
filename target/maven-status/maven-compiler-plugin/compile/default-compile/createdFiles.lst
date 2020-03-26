@@ -1,0 +1,4 @@
+com\rft\deport\exception\WarehouseException.class
+com\rft\deport\service\impl\WarehouseServiceImpl.class
+com\rft\deport\controller\WarehouseController.class
+com\rft\deport\service\WarehouseService.class

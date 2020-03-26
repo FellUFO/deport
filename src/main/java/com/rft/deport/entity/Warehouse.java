@@ -1,5 +1,8 @@
 package com.rft.deport.entity;
 
+import lombok.ToString;
+
+@ToString
 public class Warehouse {
     private Integer warehouseId;
 

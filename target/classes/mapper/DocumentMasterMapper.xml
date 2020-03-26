@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rft.deport.dao.DocumentMasterMapper" >
+  <resultMap id="BaseResultMap" type="com.rft.deport.entity.DocumentMaster" >
+    <id column="order_id" property="orderId" jdbcType="VARCHAR" />
+    <result column="object" property="object" jdbcType="VARCHAR" />
+    <result column="total_price" property="totalPrice" jdbcType="DECIMAL" />
+    <result column="total_count" property="totalCount" jdbcType="INTEGER" />
+    <result column="generate" property="generate" jdbcType="TIMESTAMP" />
+    <result column="operator" property="operator" jdbcType="INTEGER" />
+    <result column="deport_id" property="deportId" jdbcType="INTEGER" />
+    <result column="deport_name" property="deportName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    order_id, object, total_price, total_count, generate, operator, deport_id, deport_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from document_master
+    where order_id = #{orderId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from document_master
+    where order_id = #{orderId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.rft.deport.entity.DocumentMaster" >
+    insert into document_master (order_id, object, total_price, 
+      total_count, generate, operator, 
+      deport_id, deport_name)
+    values (#{orderId,jdbcType=VARCHAR}, #{object,jdbcType=VARCHAR}, #{totalPrice,jdbcType=DECIMAL}, 
+      #{totalCount,jdbcType=INTEGER}, #{generate,jdbcType=TIMESTAMP}, #{operator,jdbcType=INTEGER}, 
+      #{deportId,jdbcType=INTEGER}, #{deportName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.rft.deport.entity.DocumentMaster" >
+    insert into document_master
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orderId != null" >
+        order_id,
+      </if>
+      <if test="object != null" >
+        object,
+      </if>
+      <if test="totalPrice != null" >
+        total_price,
+      </if>
+      <if test="totalCount != null" >
+        total_count,
+      </if>
+      <if test="generate != null" >
+        generate,
+      </if>
+      <if test="operator != null" >
+        operator,
+      </if>
+      <if test="deportId != null" >
+        deport_id,
+      </if>
+      <if test="deportName != null" >
+        deport_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orderId != null" >
+        #{orderId,jdbcType=VARCHAR},
+      </if>
+      <if test="object != null" >
+        #{object,jdbcType=VARCHAR},
+      </if>
+      <if test="totalPrice != null" >
+        #{totalPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="totalCount != null" >
+        #{totalCount,jdbcType=INTEGER},
+      </if>
+      <if test="generate != null" >
+        #{generate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operator != null" >
+        #{operator,jdbcType=INTEGER},
+      </if>
+      <if test="deportId != null" >
+        #{deportId,jdbcType=INTEGER},
+      </if>
+      <if test="deportName != null" >
+        #{deportName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.rft.deport.entity.DocumentMaster" >
+    update document_master
+    <set >
+      <if test="object != null" >
+        object = #{object,jdbcType=VARCHAR},
+      </if>
+      <if test="totalPrice != null" >
+        total_price = #{totalPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="totalCount != null" >
+        total_count = #{totalCount,jdbcType=INTEGER},
+      </if>
+      <if test="generate != null" >
+        generate = #{generate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operator != null" >
+        operator = #{operator,jdbcType=INTEGER},
+      </if>
+      <if test="deportId != null" >
+        deport_id = #{deportId,jdbcType=INTEGER},
+      </if>
+      <if test="deportName != null" >
+        deport_name = #{deportName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where order_id = #{orderId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.rft.deport.entity.DocumentMaster" >
+    update document_master
+    set object = #{object,jdbcType=VARCHAR},
+      total_price = #{totalPrice,jdbcType=DECIMAL},
+      total_count = #{totalCount,jdbcType=INTEGER},
+      generate = #{generate,jdbcType=TIMESTAMP},
+      operator = #{operator,jdbcType=INTEGER},
+      deport_id = #{deportId,jdbcType=INTEGER},
+      deport_name = #{deportName,jdbcType=VARCHAR}
+    where order_id = #{orderId,jdbcType=VARCHAR}
+  </update>
+</mapper>
