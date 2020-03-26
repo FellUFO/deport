@@ -1,7 +1,8 @@
 package com.rft.deport.service;
 
 import com.rft.deport.entity.Product;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 public interface ProductService {
@@ -13,4 +14,5 @@ public interface ProductService {
     void addProduct(Product product);
 
 
+    List<Product> selectAll();
 }

@@ -7,6 +7,8 @@ import com.rft.deport.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -19,5 +21,15 @@ public class ProductServiceImpl implements ProductService {
         if (index != 1){
             throw new ProductException("添加商品失败");
         }
+    }
+
+    @Override
+    public List<Product> selectAll() {
+
+        List<Product> products = productMapper.selectAll();
+        if (products.isEmpty()) {
+            throw new ProductException("查询商品失败");
+        }
+        return products;
     }
 }

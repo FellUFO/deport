@@ -33,11 +33,20 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    public boolean selectAll() {
+    public List<Location> selectAll() {
+        List<Location> select = locationMapper.select();
+        if (select.isEmpty()) {
+           throw new LocationException("查询库位为空");
+        }
+        return select;
+    }
+
+    @Override
+    public boolean selectAllToBoolean() {
         boolean bool = false;
         List<Location> select = locationMapper.select();
         if (select.isEmpty()) {
-            bool =true;
+            bool = true;
         }
         return bool;
     }

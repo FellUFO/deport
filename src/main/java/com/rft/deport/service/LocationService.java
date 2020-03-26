@@ -11,5 +11,7 @@ public interface LocationService {
 
     void dropAll();
 
-    boolean selectAll();
+    List<Location> selectAll();
+
+    boolean selectAllToBoolean();
 }

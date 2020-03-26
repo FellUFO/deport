@@ -125,4 +125,7 @@
       warehouse_id = #{warehouseId,jdbcType=INTEGER}
     where product_id = #{productId,jdbcType=VARCHAR}
   </update>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from product
+  </select>
 </mapper>

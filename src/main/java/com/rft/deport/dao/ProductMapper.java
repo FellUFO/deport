@@ -3,6 +3,8 @@ package com.rft.deport.dao;
 import com.rft.deport.entity.Product;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface ProductMapper {
     int deleteByPrimaryKey(String productId);
@@ -16,4 +18,6 @@ public interface ProductMapper {
     int updateByPrimaryKeySelective(Product record);
 
     int updateByPrimaryKey(Product record);
+
+    List<Product> selectAll();
 }
