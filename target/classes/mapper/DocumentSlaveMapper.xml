@@ -79,4 +79,12 @@
       count = #{count,jdbcType=INTEGER}
     where id = #{id,jdbcType=VARCHAR}
   </update>
+  <insert id="insertListDocumentSlave" parameterType="com.rft.deport.entity.DocumentSlave">
+    insert into document_slave (id, master_id, product_id, count)
+     values
+    <foreach collection="list" item="item" index="index" separator=",">
+      (#{item.id,jdbcType=VARCHAR}, #{item.masterId,jdbcType=VARCHAR}, #{item.productId,jdbcType=VARCHAR},
+      #{item.count,jdbcType=INTEGER})
+    </foreach>
+  </insert>
 </mapper>

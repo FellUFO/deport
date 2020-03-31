@@ -1,5 +1,8 @@
 package com.rft.deport.entity;
 
+import lombok.ToString;
+
+@ToString
 public class DocumentSlave {
     private String id;
 

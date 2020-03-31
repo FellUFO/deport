@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class DocumentImpl implements DocumentService {
+public class DocumentServiceImpl implements DocumentService {
 
     @Autowired
     DocumentMasterMapper dmm;
@@ -21,6 +21,7 @@ public class DocumentImpl implements DocumentService {
 
     @Override
     public void insertDocument(DocumentMaster documentMaster, List<DocumentSlave> documentSlave) {
+        int insert = dmm.insert(documentMaster);
 
     }
 }

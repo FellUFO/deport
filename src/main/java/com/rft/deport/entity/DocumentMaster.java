@@ -1,8 +1,11 @@
 package com.rft.deport.entity;
 
+import lombok.ToString;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
+@ToString
 public class DocumentMaster {
     private String orderId;
 
@@ -17,8 +20,6 @@ public class DocumentMaster {
     private Integer operator;
 
     private Integer deportId;
-
-    private String deportName;
 
     public String getOrderId() {
         return orderId;
@@ -74,13 +75,5 @@ public class DocumentMaster {
 
     public void setDeportId(Integer deportId) {
         this.deportId = deportId;
-    }
-
-    public String getDeportName() {
-        return deportName;
-    }
-
-    public void setDeportName(String deportName) {
-        this.deportName = deportName == null ? null : deportName.trim();
     }
 }

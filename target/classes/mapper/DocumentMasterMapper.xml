@@ -9,10 +9,9 @@
     <result column="generate" property="generate" jdbcType="TIMESTAMP" />
     <result column="operator" property="operator" jdbcType="INTEGER" />
     <result column="deport_id" property="deportId" jdbcType="INTEGER" />
-    <result column="deport_name" property="deportName" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    order_id, object, total_price, total_count, generate, operator, deport_id, deport_name
+    order_id, object, total_price, total_count, generate, operator, deport_id
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
@@ -27,10 +26,10 @@
   <insert id="insert" parameterType="com.rft.deport.entity.DocumentMaster" >
     insert into document_master (order_id, object, total_price, 
       total_count, generate, operator, 
-      deport_id, deport_name)
+      deport_id)
     values (#{orderId,jdbcType=VARCHAR}, #{object,jdbcType=VARCHAR}, #{totalPrice,jdbcType=DECIMAL}, 
       #{totalCount,jdbcType=INTEGER}, #{generate,jdbcType=TIMESTAMP}, #{operator,jdbcType=INTEGER}, 
-      #{deportId,jdbcType=INTEGER}, #{deportName,jdbcType=VARCHAR})
+      #{deportId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.rft.deport.entity.DocumentMaster" >
     insert into document_master
@@ -56,9 +55,6 @@
       <if test="deportId != null" >
         deport_id,
       </if>
-      <if test="deportName != null" >
-        deport_name,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="orderId != null" >
@@ -81,9 +77,6 @@
       </if>
       <if test="deportId != null" >
         #{deportId,jdbcType=INTEGER},
-      </if>
-      <if test="deportName != null" >
-        #{deportName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -108,9 +101,6 @@
       <if test="deportId != null" >
         deport_id = #{deportId,jdbcType=INTEGER},
       </if>
-      <if test="deportName != null" >
-        deport_name = #{deportName,jdbcType=VARCHAR},
-      </if>
     </set>
     where order_id = #{orderId,jdbcType=VARCHAR}
   </update>
@@ -122,7 +112,6 @@
       generate = #{generate,jdbcType=TIMESTAMP},
       operator = #{operator,jdbcType=INTEGER},
       deport_id = #{deportId,jdbcType=INTEGER},
-      deport_name = #{deportName,jdbcType=VARCHAR}
     where order_id = #{orderId,jdbcType=VARCHAR}
   </update>
 </mapper>

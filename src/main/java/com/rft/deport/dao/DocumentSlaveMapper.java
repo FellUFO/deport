@@ -2,6 +2,8 @@ package com.rft.deport.dao;
 
 import com.rft.deport.entity.DocumentSlave;
 
+import java.util.List;
+
 public interface DocumentSlaveMapper {
     int deleteByPrimaryKey(String id);
 
@@ -14,4 +16,6 @@ public interface DocumentSlaveMapper {
     int updateByPrimaryKeySelective(DocumentSlave record);
 
     int updateByPrimaryKey(DocumentSlave record);
+
+    int insertListDocumentSlave(List<DocumentSlave> list);
 }
