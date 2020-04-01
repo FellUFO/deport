@@ -1,5 +1,7 @@
 package com.rft.deport.dao;
 
+import com.rft.deport.entity.DocumentMaster;
+import com.rft.deport.entity.DocumentSlave;
 import com.rft.deport.entity.Product;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -20,4 +22,8 @@ public interface ProductMapper {
     int updateByPrimaryKey(Product record);
 
     List<Product> selectAll();
+
+    int updateAddCount(List<DocumentSlave> documentSlaves);
+
+    int updateReduceCount(List<DocumentSlave> documentSlaves);
 }

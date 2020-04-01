@@ -1,7 +1,9 @@
 package com.rft.deport.dao;
 
 import com.rft.deport.entity.DocumentMaster;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface DocumentMasterMapper {
     int deleteByPrimaryKey(String orderId);
 

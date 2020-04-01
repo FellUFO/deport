@@ -2,8 +2,10 @@ package com.rft.deport.entity;
 
 import lombok.ToString;
 
+import java.io.Serializable;
+
 @ToString
-public class DocumentSlave {
+public class DocumentSlave implements Serializable {
     private String id;
 
     private String masterId;

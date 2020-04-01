@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +31,7 @@ public class ProductController {
         try {
             String id = IDUtil.getID();
             product.setProductId(id);
+            product.setAddTime(new Date());
             productServicel.addProduct(product);
             date.put(TAG,"添加成功");
         } catch (Exception e) {

@@ -1,5 +1,11 @@
 package com.rft.deport.utils;
 
+import com.alibaba.fastjson.JSON;
+import com.rft.deport.entity.DocumentMaster;
+import com.rft.deport.entity.DocumentSlave;
+
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public class IDUtil {
@@ -25,6 +31,10 @@ public class IDUtil {
             }
         }
         return tmp;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getID());
     }
 
 

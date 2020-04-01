@@ -27,7 +27,7 @@
   <insert id="insert" parameterType="com.rft.deport.entity.Product" >
     insert into product (product_id, product_name, add_time, 
       update_time, category, message, 
-      count, warehouse_id)
+      `count`, warehouse_id)
     values (#{productId,jdbcType=VARCHAR}, #{productName,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP}, #{category,jdbcType=VARCHAR}, #{message,jdbcType=VARCHAR}, 
       #{count,jdbcType=INTEGER}, #{warehouseId,jdbcType=INTEGER})
@@ -54,7 +54,7 @@
         message,
       </if>
       <if test="count != null" >
-        count,
+        `count`,
       </if>
       <if test="warehouseId != null" >
         warehouse_id,
@@ -106,7 +106,7 @@
         message = #{message,jdbcType=VARCHAR},
       </if>
       <if test="count != null" >
-        count = #{count,jdbcType=INTEGER},
+        `count` = #{count,jdbcType=INTEGER},
       </if>
       <if test="warehouseId != null" >
         warehouse_id = #{warehouseId,jdbcType=INTEGER},
@@ -121,11 +121,41 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       category = #{category,jdbcType=VARCHAR},
       message = #{message,jdbcType=VARCHAR},
-      count = #{count,jdbcType=INTEGER},
+      `count` = #{count,jdbcType=INTEGER},
       warehouse_id = #{warehouseId,jdbcType=INTEGER}
     where product_id = #{productId,jdbcType=VARCHAR}
   </update>
   <select id="selectAll" resultMap="BaseResultMap">
     select * from product
   </select>
+  <update id="updateAddCount"   parameterType="com.rft.deport.entity.DocumentSlave" >
+    <foreach collection="list" item="item" index="index" separator=",">
+      update product
+      <set>
+        <if test="item.count != null and item.count != ''">
+            `count` = `count` + #{item.count}
+        </if>
+      </set>
+      <where>
+        <if test="item.productId != null and item.productId != ''">
+            product_id = #{item.productId}
+        </if>
+      </where>
+    </foreach>
+  </update>
+  <update id="updateReduceCount" parameterType="com.rft.deport.entity.DocumentSlave">
+    <foreach collection="list" item="item" index="index" separator=",">
+      update product
+      <set>
+        <if test="item.count != null and item.count != ''">
+          `count` = `count` - #{item.count}
+        </if>
+      </set>
+      <where>
+        <if test="item.productId != null and item.productId != ''">
+          product_id = #{item.productId}
+        </if>
+      </where>
+    </foreach>
+  </update>
 </mapper>

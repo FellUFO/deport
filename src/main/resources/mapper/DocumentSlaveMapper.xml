@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.rft.deport.dao.DocumentSlaveMapper" >
   <resultMap id="BaseResultMap" type="com.rft.deport.entity.DocumentSlave" >
-    <id column="id" property="id" jdbcType="VARCHAR" />
+    <id column="id" property="id" jdbcType="INTEGER" />
     <result column="master_id" property="masterId" jdbcType="VARCHAR" />
     <result column="product_id" property="productId" jdbcType="VARCHAR" />
     <result column="count" property="count" jdbcType="INTEGER" />
@@ -14,16 +14,16 @@
     select 
     <include refid="Base_Column_List" />
     from document_slave
-    where id = #{id,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from document_slave
-    where id = #{id,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.rft.deport.entity.DocumentSlave" >
     insert into document_slave (id, master_id, product_id, 
       count)
-    values (#{id,jdbcType=VARCHAR}, #{masterId,jdbcType=VARCHAR}, #{productId,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{masterId,jdbcType=VARCHAR}, #{productId,jdbcType=VARCHAR},
       #{count,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.rft.deport.entity.DocumentSlave" >
@@ -44,7 +44,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
-        #{id,jdbcType=VARCHAR},
+        #{id,jdbcType=INTEGER},
       </if>
       <if test="masterId != null" >
         #{masterId,jdbcType=VARCHAR},
@@ -70,20 +70,20 @@
         count = #{count,jdbcType=INTEGER},
       </if>
     </set>
-    where id = #{id,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rft.deport.entity.DocumentSlave" >
     update document_slave
     set master_id = #{masterId,jdbcType=VARCHAR},
       product_id = #{productId,jdbcType=VARCHAR},
       count = #{count,jdbcType=INTEGER}
-    where id = #{id,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <insert id="insertListDocumentSlave" parameterType="com.rft.deport.entity.DocumentSlave">
-    insert into document_slave (id, master_id, product_id, count)
+    insert into document_slave (master_id, product_id, count)
      values
     <foreach collection="list" item="item" index="index" separator=",">
-      (#{item.id,jdbcType=VARCHAR}, #{item.masterId,jdbcType=VARCHAR}, #{item.productId,jdbcType=VARCHAR},
+      ( #{item.masterId,jdbcType=VARCHAR}, #{item.productId,jdbcType=VARCHAR},
       #{item.count,jdbcType=INTEGER})
     </foreach>
   </insert>

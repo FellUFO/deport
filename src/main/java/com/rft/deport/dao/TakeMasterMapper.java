@@ -2,6 +2,8 @@ package com.rft.deport.dao;
 
 import com.rft.deport.entity.TakeMaster;
 
+import java.util.List;
+
 public interface TakeMasterMapper {
     int deleteByPrimaryKey(String taskId);
 
@@ -14,4 +16,6 @@ public interface TakeMasterMapper {
     int updateByPrimaryKeySelective(TakeMaster record);
 
     int updateByPrimaryKey(TakeMaster record);
+
+    List<TakeMaster> selectByState();
 }

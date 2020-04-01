@@ -55,4 +55,7 @@
     set state = #{state,jdbcType=INTEGER}
     where task_id = #{taskId,jdbcType=VARCHAR}
   </update>
+  <select id="selectByState" resultMap="BaseResultMap">
+    select * from task_master where state = #{state}
+  </select>
 </mapper>

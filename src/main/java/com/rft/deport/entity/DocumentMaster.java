@@ -2,11 +2,16 @@ package com.rft.deport.entity;
 
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @ToString
-public class DocumentMaster {
+public class DocumentMaster implements Serializable {
+
+    private List<DocumentSlave> DocumentSlaves;
+
     private String orderId;
 
     private String object;
@@ -20,6 +25,14 @@ public class DocumentMaster {
     private Integer operator;
 
     private Integer deportId;
+
+    public List<DocumentSlave> getDocumentSlaves() {
+        return DocumentSlaves;
+    }
+
+    public void setDocumentSlaves(List<DocumentSlave> documentSlaves) {
+        DocumentSlaves = documentSlaves;
+    }
 
     public String getOrderId() {
         return orderId;
