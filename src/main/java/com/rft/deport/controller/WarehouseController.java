@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,5 +31,19 @@ public class WarehouseController {
             map.put(TAG,e.getMessage());
         }
         return map;
+    }
+
+    @RequestMapping("/getWarehouse")
+    public List<String> getAllWarehouse(){
+        List<String> list = new ArrayList<>();
+        try {
+            List<Warehouse> warehouseList = warehouseService.getAll();
+            for (Warehouse warehouse : warehouseList) {
+                list.add(warehouse.getWarehouseName());
+            }
+
+        } catch (Exception e) {
+        }
+        return list;
     }
 }

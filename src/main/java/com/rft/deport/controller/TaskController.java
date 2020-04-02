@@ -2,12 +2,13 @@ package com.rft.deport.controller;
 
 
 import com.rft.deport.entity.TakeMaster;
+import com.rft.deport.entity.TakeSlave;
 import com.rft.deport.exception.TaskException;
 import com.rft.deport.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.plaf.nimbus.State;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,15 @@ public class TaskController {
     public Map getTask(@RequestParam(value = "state", required = false) String state){
         Map map = new HashMap();
         try {
-            List<TakeMaster> allTask = taskService.getAllTask(state);
+            //查询主任务
+            List<TakeMaster> allTask = taskService.getAllTask(Integer.valueOf(state));
+            System.out.println(allTask.size());
+            //根据主任务id来查询所有副任务
+            for (TakeMaster takeMaster : allTask) {
+                System.out.println(takeMaster.getTaskId());
+                List<TakeSlave> slaves = taskService.selectTaskMessageByID(takeMaster.getTaskId());
+                takeMaster.setSlaves(slaves);
+            }
             map.put("data",allTask);
         } catch (TaskException e) {
             map.put("message", e.getMessage());

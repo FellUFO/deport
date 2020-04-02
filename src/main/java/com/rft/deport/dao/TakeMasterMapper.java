@@ -17,5 +17,5 @@ public interface TakeMasterMapper {
 
     int updateByPrimaryKey(TakeMaster record);
 
-    List<TakeMaster> selectByState();
+    List<TakeMaster> selectByState(int state);
 }

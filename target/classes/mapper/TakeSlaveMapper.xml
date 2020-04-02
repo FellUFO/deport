@@ -79,4 +79,7 @@
       task_count = #{taskCount,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectByMasterID" resultMap="BaseResultMap">
+    select * from task_slave where master_id = #{taskId};
+  </select>
 </mapper>

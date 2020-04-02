@@ -35,6 +35,7 @@ public class IDUtil {
 
     public static void main(String[] args) {
         System.out.println(getID());
+        System.out.println(getID().substring(0,1));
     }
 
 

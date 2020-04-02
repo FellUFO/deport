@@ -1,5 +1,7 @@
 package com.rft.deport.entity;
 
+import java.util.List;
+
 public class TakeMaster {
     private String taskId;
 
@@ -19,5 +21,15 @@ public class TakeMaster {
 
     public void setState(Integer state) {
         this.state = state;
+    }
+
+    public List<TakeSlave> slaves;
+
+    public List<TakeSlave> getSlaves() {
+        return slaves;
+    }
+
+    public void setSlaves(List<TakeSlave> slaves) {
+        this.slaves = slaves;
     }
 }

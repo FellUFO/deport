@@ -2,6 +2,8 @@ package com.rft.deport.dao;
 
 import com.rft.deport.entity.TakeSlave;
 
+import java.util.List;
+
 public interface TakeSlaveMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface TakeSlaveMapper {
     int updateByPrimaryKeySelective(TakeSlave record);
 
     int updateByPrimaryKey(TakeSlave record);
+
+    List<TakeSlave> selectByMasterID(String taskId);
 }
