@@ -3,6 +3,7 @@ package com.rft.deport.controller;
 import com.alibaba.fastjson.JSON;
 import com.rft.deport.entity.DocumentMaster;
 import com.rft.deport.entity.DocumentSlave;
+import com.rft.deport.entity.MasterAndSlave;
 import com.rft.deport.service.DocumentService;
 import com.rft.deport.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,10 @@ public class DocumentController {
     @RequestMapping("/createDocument")
     public String addDocument(@RequestBody String content) {
         String result;
-        DocumentMaster documentMaster = JSON.parseObject(content, DocumentMaster.class);
+        MasterAndSlave masterAndSlave = JSON.parseObject(content, MasterAndSlave.class);
 //        System.out.println(documentMaster);
-        List<DocumentSlave> documentSlaves = documentMaster.getDocumentSlaves();
+        DocumentMaster documentMaster = masterAndSlave.getDocumentMaster();
+        List<DocumentSlave> documentSlaves = masterAndSlave.getSlaves();
         //增减产品数量
         productService.updateCount(documentMaster.getObject(),documentSlaves);
         if (documentMaster == null || documentSlaves.isEmpty()) {
