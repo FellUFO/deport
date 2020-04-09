@@ -1,6 +1,7 @@
 package com.rft.deport.controller;
 
 
+import com.rft.deport.dto.TakesUnit;
 import com.rft.deport.entity.TakeMaster;
 import com.rft.deport.entity.TakeSlave;
 import com.rft.deport.exception.TaskException;
@@ -27,6 +28,7 @@ public class TaskController {
      */
     @RequestMapping("/getTaskByState")
     public Map getTask(@RequestParam(value = "state", required = false) String state){
+//        TakesUnit unit = new TakesUnit();
         Map map = new HashMap();
         try {
             //查询主任务
@@ -38,10 +40,13 @@ public class TaskController {
                 List<TakeSlave> slaves = taskService.selectTaskMessageByID(takeMaster.getTaskId());
                 takeMaster.setSlaves(slaves);
             }
-            map.put("data",allTask);
+//            unit.setList(allTask);
+            map.put("list",allTask);
         } catch (TaskException e) {
-            map.put("message", e.getMessage());
+//            unit.setMessages(e.getMessage());
+            map.put("message",e.getMessage());
         }
+//        return unit;
         return map;
     }
 
