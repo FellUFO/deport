@@ -16,10 +16,6 @@ public class DocumentMaster implements Serializable {
 
     private String object;
 
-    private BigDecimal totalPrice;
-
-    private Integer totalCount;
-
     private Date generate;
 
     private Integer operator;
@@ -48,22 +44,6 @@ public class DocumentMaster implements Serializable {
 
     public void setObject(String object) {
         this.object = object == null ? null : object.trim();
-    }
-
-    public BigDecimal getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(BigDecimal totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public Integer getTotalCount() {
-        return totalCount;
-    }
-
-    public void setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
     }
 
     public Date getGenerate() {

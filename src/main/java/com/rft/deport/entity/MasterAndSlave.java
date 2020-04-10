@@ -1,7 +1,10 @@
 package com.rft.deport.entity;
 
+import lombok.ToString;
+
 import java.util.List;
 
+@ToString
 public class MasterAndSlave {
 
     private DocumentMaster master;
