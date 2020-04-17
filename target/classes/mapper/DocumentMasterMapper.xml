@@ -90,4 +90,8 @@
       deport_id = #{deportId,jdbcType=INTEGER},
     where order_id = #{orderId,jdbcType=VARCHAR}
   </update>
+  <select id="selectByDate" resultMap="BaseResultMap">
+    select * from document_master
+    where to_days(generate) = to_days(now());
+  </select>
 </mapper>

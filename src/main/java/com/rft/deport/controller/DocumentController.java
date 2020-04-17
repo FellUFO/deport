@@ -3,7 +3,7 @@ package com.rft.deport.controller;
 import com.alibaba.fastjson.JSON;
 import com.rft.deport.entity.DocumentMaster;
 import com.rft.deport.entity.DocumentSlave;
-import com.rft.deport.entity.MasterAndSlave;
+import com.rft.deport.dto.MasterAndSlave;
 import com.rft.deport.service.DocumentService;
 import com.rft.deport.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class DocumentController {
     public String addDocument(@RequestBody String content) {
         String result;
         MasterAndSlave masterAndSlave = JSON.parseObject(content, MasterAndSlave.class);
-        DocumentMaster documentMaster = masterAndSlave.getDocumentMaster();
+        DocumentMaster documentMaster = masterAndSlave.getMaster();
         List<DocumentSlave> documentSlaves = masterAndSlave.getSlaves();
         //增减产品数量
         productService.updateCount(documentMaster.getObject(),documentSlaves);
@@ -57,7 +57,7 @@ public class DocumentController {
         DocumentMaster documentMaster = new DocumentMaster();
         List<DocumentSlave> documentSlaves = new ArrayList<>();
         for (MasterAndSlave masterAndSlave : masterAndSlaves) {
-            documentMaster = masterAndSlave.getDocumentMaster();
+            documentMaster = masterAndSlave.getMaster();
             documentSlaves = masterAndSlave.getSlaves();
             //增减产品数量
             productService.updateCount(documentMaster.getObject(),documentSlaves);
@@ -70,6 +70,24 @@ public class DocumentController {
             e.printStackTrace();
         }
         return result;
+    }
+
+    /**
+     * 获取当天所有在线产生的单据
+     */
+    @RequestMapping("/getDocumentByState")
+    public List<MasterAndSlave> getDocumentByState() {
+        List<MasterAndSlave> masterAndSlaves = new ArrayList<>();
+        try {
+            masterAndSlaves = documentService.selectDocumentByState2Day();
+            for (MasterAndSlave masterAndSlave : masterAndSlaves) {
+
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return masterAndSlaves;
     }
 
 }

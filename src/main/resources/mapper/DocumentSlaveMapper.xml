@@ -87,4 +87,7 @@
       #{item.count,jdbcType=INTEGER})
     </foreach>
   </insert>
+  <select id="selectByMasterID" resultMap="BaseResultMap" >
+    select * from document_slave where master_id = #{id}
+  </select>
 </mapper>

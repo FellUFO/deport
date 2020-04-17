@@ -151,11 +151,7 @@
           `count` = `count` - #{item.count}
         </if>
       </set>
-      <where>
-        <if test="item.productId != null and item.productId != ''">
-          product_id = #{item.productId}
-        </if>
-      </where>
+     where product_id = #{item.productId}
     </foreach>
   </update>
 </mapper>

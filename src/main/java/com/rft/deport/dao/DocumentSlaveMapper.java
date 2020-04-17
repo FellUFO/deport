@@ -20,4 +20,6 @@ public interface DocumentSlaveMapper {
     int updateByPrimaryKey(DocumentSlave record);
 
     int insertListDocumentSlave(List<DocumentSlave> list);
+
+    List<DocumentSlave> selectByMasterID(String id);
 }

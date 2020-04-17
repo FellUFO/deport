@@ -2,12 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61e857ba-5ef8-4c8f-90ea-b8cc7311b7fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/deport.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/DocumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/entity/DocumentMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/entity/DocumentMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/entity/MasterAndSlave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/entity/MasterAndSlave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/dao/DocumentMasterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/dao/DocumentMasterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/dao/DocumentSlaveMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/dao/DocumentSlaveMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/entity/MasterAndSlave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/dto/MasterAndSlave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/DocumentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/DocumentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/impl/DocumentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/impl/DocumentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DocumentMasterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DocumentMasterMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DocumentSlaveMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DocumentSlaveMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/DocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/DocumentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/dao/DocumentMasterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/dao/DocumentMasterMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/dao/DocumentSlaveMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/dao/DocumentSlaveMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/entity/MasterAndSlave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/service/DocumentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/service/DocumentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/service/impl/DocumentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/service/impl/DocumentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DocumentMasterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DocumentMasterMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DocumentSlaveMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DocumentSlaveMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProductMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,21 +88,24 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.rft.deport.dao" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IdeaProject\deport\src\main\java\com\rft\deport\entity" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProject\deport\src\main\resources\db" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.rft.deport.exception" />
       <recent name="com.rft.deport.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProject\deport\src\main\java\com\rft\deport\entity" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.DeportApplication">
@@ -163,6 +180,14 @@
       <workItem from="1586330802364" duration="3387000" />
       <workItem from="1586400695081" duration="10933000" />
       <workItem from="1586480370603" duration="13062000" />
+      <workItem from="1586515332249" duration="387000" />
+      <workItem from="1586740760901" duration="5883000" />
+      <workItem from="1586759729417" duration="5049000" />
+      <workItem from="1586830734435" duration="15600000" />
+      <workItem from="1586917413134" duration="8937000" />
+      <workItem from="1586999523324" duration="11277000" />
+      <workItem from="1587024398243" duration="3987000" />
+      <workItem from="1587085959601" duration="9700000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加商品&#10;2.生成库位编码">
       <created>1585208322950</created>
@@ -220,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586427990589</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="封装app离线使用的接口">
+      <created>1586515624799</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586515624799</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +302,8 @@
     <MESSAGE value="完成基本的按键操作" />
     <MESSAGE value="后台功能基本确定，后续在做改进" />
     <MESSAGE value="添加了单据封装的数据实体" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了单据封装的数据实体" />
+    <MESSAGE value="封装app离线使用的接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="封装app离线使用的接口" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="201" key="#Inspections" timestamp="1585711055784">
@@ -282,11 +315,11 @@
     </state>
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585190072649" />
     <state x="414" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586403298085" />
-    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1586230235900">
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1586847577030">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585271272694" />
-    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1586230235900" />
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1586847577030" />
     <state x="689" y="314" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586403278728">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -299,55 +332,55 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="744" y="406" width="431" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1585644730731" />
-    <state x="459" y="117" key="CommitChangelistDialog2" timestamp="1586427988320">
+    <state x="459" y="117" key="CommitChangelistDialog2" timestamp="1586515601791">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="459" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585295656229" />
-    <state x="459" y="117" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1586427988320" />
+    <state x="459" y="117" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1586515601791" />
     <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1585708649205">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585708649205" />
-    <state width="1877" height="613" key="GridCell.Tab.0.bottom" timestamp="1586511511813">
+    <state width="1877" height="16" key="GridCell.Tab.0.bottom" timestamp="1587113566774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585623153048" />
-    <state width="1877" height="613" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586511511813" />
-    <state width="1877" height="613" key="GridCell.Tab.0.center" timestamp="1586511511813">
+    <state width="1877" height="16" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587113566774" />
+    <state width="1877" height="16" key="GridCell.Tab.0.center" timestamp="1587113566774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585623153048" />
-    <state width="1877" height="613" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586511511813" />
-    <state width="1877" height="613" key="GridCell.Tab.0.left" timestamp="1586511511813">
+    <state width="1877" height="16" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587113566774" />
+    <state width="1877" height="16" key="GridCell.Tab.0.left" timestamp="1587113566774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585623153048" />
-    <state width="1877" height="613" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586511511813" />
-    <state width="1877" height="613" key="GridCell.Tab.0.right" timestamp="1586511511813">
+    <state width="1877" height="16" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587113566774" />
+    <state width="1877" height="16" key="GridCell.Tab.0.right" timestamp="1587113566774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585623153048" />
-    <state width="1877" height="613" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586511511813" />
-    <state width="1877" height="613" key="GridCell.Tab.1.bottom" timestamp="1586511511814">
+    <state width="1877" height="16" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587113566774" />
+    <state width="1877" height="16" key="GridCell.Tab.1.bottom" timestamp="1587113566774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="13" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585561066687" />
-    <state width="1877" height="613" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586511511814" />
-    <state width="1877" height="613" key="GridCell.Tab.1.center" timestamp="1586511511813">
+    <state width="1877" height="16" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587113566774" />
+    <state width="1877" height="16" key="GridCell.Tab.1.center" timestamp="1587113566774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="13" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585561066687" />
-    <state width="1877" height="613" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586511511813" />
-    <state width="1877" height="613" key="GridCell.Tab.1.left" timestamp="1586511511813">
+    <state width="1877" height="16" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587113566774" />
+    <state width="1877" height="16" key="GridCell.Tab.1.left" timestamp="1587113566774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="13" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585561066687" />
-    <state width="1877" height="613" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586511511813" />
-    <state width="1877" height="613" key="GridCell.Tab.1.right" timestamp="1586511511814">
+    <state width="1877" height="16" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587113566774" />
+    <state width="1877" height="16" key="GridCell.Tab.1.right" timestamp="1587113566774">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="13" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585561066687" />
-    <state width="1877" height="613" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586511511814" />
+    <state width="1877" height="16" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587113566774" />
     <state width="1877" height="346" key="GridCell.Tab.2.bottom" timestamp="1585651245511">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -364,20 +397,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="346" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1585651245511" />
-    <state x="463" y="165" key="SettingsEditor" timestamp="1585189843419">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="463" y="171" key="SettingsEditor" timestamp="1587019088001">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585189843419" />
-    <state x="552" y="266" key="Vcs.Push.Dialog.v2" timestamp="1586428017706">
+    <state x="463" y="171" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587019088001" />
+    <state x="552" y="266" key="Vcs.Push.Dialog.v2" timestamp="1586515662922">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585295670290" />
-    <state x="552" y="266" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1586428017706" />
-    <state x="652" y="360" key="com.intellij.ide.util.TipDialog" timestamp="1586515335247">
+    <state x="552" y="266" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1586515662922" />
+    <state x="652" y="360" key="com.intellij.ide.util.TipDialog" timestamp="1586999743161">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="652" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585622577920" />
-    <state x="652" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586515335247" />
+    <state x="652" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586999743161" />
     <state x="443" y="128" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585815775974">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -386,6 +420,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="250" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585189651822" />
+    <state x="334" y="247" key="new project wizard" timestamp="1586751168162">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="334" y="247" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1586751168162" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1585216051528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
