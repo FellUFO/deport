@@ -75,4 +75,7 @@
        (#{item.locationNum,jdbcType=VARCHAR}, #{item.productId,jdbcType=VARCHAR})
      </foreach>
   </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from product_location
+  </select>
 </mapper>

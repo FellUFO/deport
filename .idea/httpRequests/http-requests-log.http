@@ -1,0 +1,16 @@
+GET http://localhost:8080/getLocationProduct
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-24T031214.200.json
+
+###
+
+GET http://localhost:8080/getLocationProduct
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-24T023412.200.json
+
+###
+

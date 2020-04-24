@@ -1,5 +1,6 @@
 package com.rft.deport.controller;
 
+import com.rft.deport.dto.LocationAndProducts;
 import com.rft.deport.entity.Location;
 import com.rft.deport.entity.Product;
 import com.rft.deport.entity.ProductLocation;
@@ -29,14 +30,14 @@ public class LocationProductController {
 
     /**
      * 获取当前所有商品和库位编码
-     * @return
+     * @return map
      */
-    @RequestMapping("/getlocationProduct")
+    @RequestMapping("/getLocationProduct")
     public Map getALL() {
         Map map = new HashMap();
         try {
-            List<Product> products = productService.selectAll();
             List<Location> locations = locationService.selectAll();
+            List<Product> products = productService.selectAll();
             map.put("products", products);
             map.put("locations",locations);
             map.put("message","查询成功");
@@ -69,4 +70,23 @@ public class LocationProductController {
         }
         return map;
     }
+
+
+    /**
+     * 获取当前库位与商品对应关系
+     */
+    @RequestMapping("/gerProductAndLocation")
+    public List<LocationAndProducts> getRelation() {
+        List<LocationAndProducts> list = new ArrayList<>();
+        try {
+            List<ProductLocation> all = locationProductService.getAll();
+            for (ProductLocation productLocation : all) {
+                productLocation.getLocationNum();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
 }

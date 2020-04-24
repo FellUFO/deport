@@ -128,30 +128,38 @@
   <select id="selectAll" resultMap="BaseResultMap">
     select * from product
   </select>
-  <update id="updateAddCount"   parameterType="com.rft.deport.entity.DocumentSlave" >
-    <foreach collection="list" item="item" index="index" separator=",">
-      update product
-      <set>
-        <if test="item.count != null and item.count != ''">
-            `count` = `count` + #{item.count}
-        </if>
-      </set>
-      <where>
-        <if test="item.productId != null and item.productId != ''">
-            product_id = #{item.productId}
-        </if>
-      </where>
-    </foreach>
+  <update id="updateAddCount"   parameterType="java.util.List" >
+    update product
+    set
+        `count` = CASE 
+        <foreach collection="list" item="item" index="index">
+          <if test="item.count!=null and item.count!=''">
+            when product_id = #{item.productId} then `count` + #{item.count}
+          </if>
+        </foreach>
+        end
+    where
+        product_id in
+        <foreach collection="list" item="item" index="index" open="(" separator="," close=")">
+          #{item.productId}
+        </foreach>
   </update>
   <update id="updateReduceCount" parameterType="com.rft.deport.entity.DocumentSlave">
-    <foreach collection="list" item="item" index="index" separator=",">
-      update product
-      <set>
-        <if test="item.count != null and item.count != ''">
-          `count` = `count` - #{item.count}
-        </if>
-      </set>
-     where product_id = #{item.productId}
+    update product
+    set
+    `count` = CASE
+    <foreach collection="list" item="item" index="index">
+      <if test="item.count!=null and item.count!=''">
+        when product_id = #{item.productId} then `count` - #{item.count}
+      </if>
+    </foreach>
+    end
+    where
+    product_id in
+    <foreach collection="list" item="item" index="index" open="(" separator="," close=")">
+      #{item.productId}
     </foreach>
   </update>
+
+
 </mapper>

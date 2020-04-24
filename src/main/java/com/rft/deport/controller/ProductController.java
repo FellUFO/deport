@@ -26,7 +26,6 @@ public class ProductController {
     @RequestMapping("/addProduct")
     public Map addProduct(@RequestBody String content) {
         Map date = new HashMap();
-        System.out.println(content);
         Product product = JSON.parseObject(content, Product.class);
         if (product == null) {
             date.put(TAG,"请重新输入！");

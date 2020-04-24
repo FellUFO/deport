@@ -20,4 +20,6 @@ public interface ProductLocationMapper {
     int updateByPrimaryKey(ProductLocation record);
 
     int insertList(List<ProductLocation> pl);
+
+    List<ProductLocation> selectAll();
 }

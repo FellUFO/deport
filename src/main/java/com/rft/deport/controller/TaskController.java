@@ -1,7 +1,6 @@
 package com.rft.deport.controller;
 
 
-import com.rft.deport.dto.TakesUnit;
 import com.rft.deport.entity.TakeMaster;
 import com.rft.deport.entity.TakeSlave;
 import com.rft.deport.exception.TaskException;
@@ -33,10 +32,10 @@ public class TaskController {
         try {
             //查询主任务
             List<TakeMaster> allTask = taskService.getAllTask(Integer.valueOf(state));
-            System.out.println(allTask.size());
+//            System.out.println(allTask.size());
             //根据主任务id来查询所有副任务
             for (TakeMaster takeMaster : allTask) {
-                System.out.println(takeMaster.getTaskId());
+//                System.out.println(takeMaster.getTaskId());
                 List<TakeSlave> slaves = taskService.selectTaskMessageByID(takeMaster.getTaskId());
                 takeMaster.setSlaves(slaves);
             }

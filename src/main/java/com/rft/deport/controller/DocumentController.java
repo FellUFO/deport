@@ -16,6 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * @author liyi
+ */
 @RestController
 public class DocumentController {
 
@@ -33,7 +36,7 @@ public class DocumentController {
         List<DocumentSlave> documentSlaves = masterAndSlave.getSlaves();
         //增减产品数量
         productService.updateCount(documentMaster.getObject(),documentSlaves);
-        if (documentMaster == null || documentSlaves.isEmpty()) {
+        if (documentSlaves.isEmpty()) {
             result = "数据为空";
         }
         try {
@@ -49,18 +52,14 @@ public class DocumentController {
     @RequestMapping("/createListDocument")
     public String addListDocument(@RequestBody String content) {
         String result;
-        System.out.println(content);
         List<MasterAndSlave> masterAndSlaves = JSON.parseArray(content, MasterAndSlave.class);
-        for (MasterAndSlave masterAndSlave : masterAndSlaves) {
-            System.out.println(masterAndSlave);
-        }
         DocumentMaster documentMaster = new DocumentMaster();
         List<DocumentSlave> documentSlaves = new ArrayList<>();
         for (MasterAndSlave masterAndSlave : masterAndSlaves) {
             documentMaster = masterAndSlave.getMaster();
             documentSlaves = masterAndSlave.getSlaves();
             //增减产品数量
-            productService.updateCount(documentMaster.getObject(),documentSlaves);
+           productService.updateCount(documentMaster.getObject(), documentSlaves);
         }
         try {
             documentService.insertDocument(documentMaster, documentSlaves);
@@ -80,9 +79,6 @@ public class DocumentController {
         List<MasterAndSlave> masterAndSlaves = new ArrayList<>();
         try {
             masterAndSlaves = documentService.selectDocumentByState2Day();
-            for (MasterAndSlave masterAndSlave : masterAndSlaves) {
-
-            }
         }
         catch (Exception e) {
             e.printStackTrace();

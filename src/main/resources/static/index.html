@@ -20,8 +20,13 @@
             $("#warehouse").append(options);
         }
     })
+
+    var addClass = function () {
+        alert("1");
+    }
 </script>
 <body>
+<button onclick="addClass()">alert</button>
     <form action="http://localhost:8080/addProduct" method="post" >
         产品名称: <input type="text" name="productName" id="name"><br>
         规格: <input type="text" name="category"><br>

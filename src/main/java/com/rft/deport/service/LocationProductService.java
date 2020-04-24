@@ -9,4 +9,6 @@ public interface LocationProductService {
 
     void insert(List<ProductLocation> pl);
 
+    public List<ProductLocation> getAll();
+
 }

@@ -37,6 +37,7 @@ public class DocumentServiceImpl implements DocumentService {
         List<DocumentMaster> masters = dmm.selectByDate();
         for (DocumentMaster master : masters) {
             //根据master_id去查询slave
+//            System.out.println(master.getOrderId());
             List<DocumentSlave> slaves = dsm.selectByMasterID(master.getOrderId());
             if (slaves.isEmpty()) {
                 throw new DocuMentException("未能查询到单据");
@@ -45,9 +46,6 @@ public class DocumentServiceImpl implements DocumentService {
             masterAndSlave.setMaster(master);
             masterAndSlave.setSlaves(slaves);
             masterAndSlaves.add(masterAndSlave);
-        }
-        if (masterAndSlaves.isEmpty()) {
-            throw new DocuMentException("未能查询到单据");
         }
         return masterAndSlaves;
     }
