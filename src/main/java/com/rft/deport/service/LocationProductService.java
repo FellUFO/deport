@@ -11,4 +11,5 @@ public interface LocationProductService {
 
     public List<ProductLocation> getAll();
 
+    void removeItem(String proID, String locationNum);
 }

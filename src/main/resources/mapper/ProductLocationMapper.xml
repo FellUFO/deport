@@ -73,9 +73,15 @@
      values
      <foreach collection="list" index="index" item="item" separator=",">
        (#{item.locationNum,jdbcType=VARCHAR}, #{item.productId,jdbcType=VARCHAR})
+       on duplicate key update
+       location_num = #{item.locationNum,jdbcType=VARCHAR},
+       product_id = #{item.productId,jdbcType=VARCHAR}
      </foreach>
   </insert>
   <select id="selectAll" resultMap="BaseResultMap">
     select * from product_location
   </select>
+  <delete id="deleteByNum" parameterType="java.lang.String">
+    DELETE FROM product_location WHERE location_num = #{locationNum} AND product_id = #{proID}
+  </delete>
 </mapper>

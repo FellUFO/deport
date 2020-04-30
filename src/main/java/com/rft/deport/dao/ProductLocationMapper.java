@@ -22,4 +22,6 @@ public interface ProductLocationMapper {
     int insertList(List<ProductLocation> pl);
 
     List<ProductLocation> selectAll();
+
+    void deleteByNum(String proID, String locationNum);
 }

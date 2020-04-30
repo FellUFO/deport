@@ -32,4 +32,9 @@ public class LocationProductServiceImpl implements LocationProductService {
         return locations;
     }
 
+    @Override
+    public void removeItem(String proID, String locationNum) {
+        plm.deleteByNum(proID, locationNum);
+    }
+
 }

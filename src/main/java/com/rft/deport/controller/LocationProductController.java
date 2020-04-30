@@ -10,6 +10,7 @@ import com.rft.deport.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -51,8 +52,8 @@ public class LocationProductController {
      * 插入商品和库位编码对应关系
      */
     @RequestMapping("/addProductLocation")
-    public Map addRelation(String product, String locals ) {
-        Map map = new HashMap();
+    public String addRelation(String product, String locals ) {
+        String map = "";
         try {
             String[] split = locals.split(",");
             List<ProductLocation> lists = new ArrayList<>();
@@ -63,9 +64,9 @@ public class LocationProductController {
                 lists.add(productLocation);
             }
             locationProductService.insert(lists);
-            map.put("message","添加成功！");
+            map= "添加成功";
         } catch (Exception e) {
-            map.put("message",e.getMessage());
+            map=e.getMessage();
             e.printStackTrace();
         }
         return map;
@@ -88,5 +89,23 @@ public class LocationProductController {
         }
         return list;
     }
+
+
+    /**
+     * 删除库位指定商品
+     */
+    @RequestMapping("/deleteLocationAndProduct")
+    public String deleteItem(@RequestParam("pro_id")String proID,
+                             @RequestParam("location_num")String locationNum) {
+        String result="";
+       try {
+           locationProductService.removeItem(proID, locationNum);
+           result = "删除成功";
+       } catch (Exception e) {
+           result = e.getMessage();
+       }
+        return result;
+    }
+
 
 }

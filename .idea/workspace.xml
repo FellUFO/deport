@@ -5,43 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61e857ba-5ef8-4c8f-90ea-b8cc7311b7fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2020-04-24T023412.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2020-04-24T031214.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/dto/LocationAndProducts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/dto/LocationUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/dto/LocationAndProducts.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/dto/LocationUnit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/DocumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/LocationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/LocationProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/LocationProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/controller/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/dao/ProductLocationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/dao/ProductLocationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/dto/TakesUnit.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/LocationProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/LocationProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/impl/DocumentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/impl/DocumentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/impl/LocationProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rft/deport/service/impl/LocationProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/deport.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/deport.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductLocationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductLocationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/product_location.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/product_location.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/DocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/DocumentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/LocationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/LocationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/LocationProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/LocationProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/controller/TaskController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/dao/ProductLocationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/dao/ProductLocationMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/dto/TakesUnit.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/service/LocationProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/service/LocationProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/service/impl/DocumentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/service/impl/DocumentServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/rft/deport/service/impl/LocationProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rft/deport/service/impl/LocationProductServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/deport.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/deport.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProductLocationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProductLocationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProductMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/product_location.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/product_location.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +217,12 @@
       <workItem from="1587517044076" duration="14327000" />
       <workItem from="1587603733047" duration="17977000" />
       <workItem from="1587689861935" duration="18060000" />
-      <workItem from="1587715883164" duration="3571000" />
+      <workItem from="1587715883164" duration="3683000" />
+      <workItem from="1587886301283" duration="6122000" />
+      <workItem from="1587949530327" duration="4923000" />
+      <workItem from="1588044490329" duration="9231000" />
+      <workItem from="1588123138370" duration="10309000" />
+      <workItem from="1588207962878" duration="15513000" />
     </task>
     <task id="LOCAL-00001" summary="1.添加商品&#10;2.生成库位编码">
       <created>1585208322950</created>
@@ -313,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587116996305</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改了之前出错的sql语句">
+      <created>1587724257111</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587724257111</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +353,8 @@
     <MESSAGE value="添加了单据封装的数据实体" />
     <MESSAGE value="封装app离线使用的接口" />
     <MESSAGE value="添加数据库sql文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加数据库sql文件" />
+    <MESSAGE value="修改了之前出错的sql语句" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了之前出错的sql语句" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="201" key="#Inspections" timestamp="1585711055784">
@@ -377,11 +366,11 @@
     </state>
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585190072649" />
     <state x="414" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586403298085" />
-    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1587621313697">
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1588217724052">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585271272694" />
-    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587621313697" />
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1588217724052" />
     <state x="689" y="314" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586403278728">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -394,11 +383,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="744" y="406" width="431" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1587692336229" />
-    <state x="459" y="117" key="CommitChangelistDialog2" timestamp="1587116993815">
+    <state x="459" y="117" key="CommitChangelistDialog2" timestamp="1587724254483">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="459" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585295656229" />
-    <state x="459" y="117" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587116993815" />
+    <state x="459" y="117" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1587724254483" />
     <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1585708649205">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -407,46 +396,46 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="785" y="438" width="373" height="204" key="Github.CreateGistDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587370752142" />
-    <state width="1877" height="3" key="GridCell.Tab.0.bottom" timestamp="1587715744772">
+    <state width="1877" height="268" key="GridCell.Tab.0.bottom" timestamp="1588236301876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585623153048" />
-    <state width="1877" height="3" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587715744772" />
-    <state width="1877" height="3" key="GridCell.Tab.0.center" timestamp="1587715744772">
+    <state width="1877" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588236301876" />
+    <state width="1877" height="268" key="GridCell.Tab.0.center" timestamp="1588236301876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="187" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585623153048" />
-    <state width="1877" height="3" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587715744772" />
-    <state width="1877" height="3" key="GridCell.Tab.0.left" timestamp="1587715744772">
+    <state width="1877" height="268" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588236301876" />
+    <state width="1877" height="268" key="GridCell.Tab.0.left" timestamp="1588236301876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="187" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585623153048" />
-    <state width="1877" height="3" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587715744772" />
-    <state width="1877" height="3" key="GridCell.Tab.0.right" timestamp="1587715744772">
+    <state width="1877" height="268" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588236301876" />
+    <state width="1877" height="268" key="GridCell.Tab.0.right" timestamp="1588236301876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="187" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585623153048" />
-    <state width="1877" height="3" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587715744772" />
-    <state width="1877" height="3" key="GridCell.Tab.1.bottom" timestamp="1587715744772">
+    <state width="1877" height="268" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588236301876" />
+    <state width="1877" height="268" key="GridCell.Tab.1.bottom" timestamp="1588236301876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="13" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585561066687" />
-    <state width="1877" height="3" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587715744772" />
-    <state width="1877" height="3" key="GridCell.Tab.1.center" timestamp="1587715744772">
+    <state width="1877" height="268" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588236301876" />
+    <state width="1877" height="268" key="GridCell.Tab.1.center" timestamp="1588236301876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="13" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585561066687" />
-    <state width="1877" height="3" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587715744772" />
-    <state width="1877" height="3" key="GridCell.Tab.1.left" timestamp="1587715744772">
+    <state width="1877" height="268" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588236301876" />
+    <state width="1877" height="268" key="GridCell.Tab.1.left" timestamp="1588236301876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="13" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585561066687" />
-    <state width="1877" height="3" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587715744772" />
-    <state width="1877" height="3" key="GridCell.Tab.1.right" timestamp="1587715744772">
+    <state width="1877" height="268" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588236301876" />
+    <state width="1877" height="268" key="GridCell.Tab.1.right" timestamp="1588236301876">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="13" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585561066687" />
-    <state width="1877" height="3" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587715744772" />
+    <state width="1877" height="268" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588236301876" />
     <state width="1877" height="215" key="GridCell.Tab.2.bottom" timestamp="1587551202003">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -468,16 +457,16 @@
     </state>
     <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585189843419" />
     <state x="463" y="171" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587715675506" />
-    <state x="552" y="266" key="Vcs.Push.Dialog.v2" timestamp="1587117018346">
+    <state x="552" y="266" key="Vcs.Push.Dialog.v2" timestamp="1587724264136">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585295670290" />
-    <state x="552" y="266" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587117018346" />
-    <state x="652" y="360" key="com.intellij.ide.util.TipDialog" timestamp="1587715885513">
+    <state x="552" y="266" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587724264136" />
+    <state x="652" y="360" key="com.intellij.ide.util.TipDialog" timestamp="1588207966779">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="652" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585622577920" />
-    <state x="652" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587715885513" />
+    <state x="652" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1588207966779" />
     <state x="443" y="128" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585815775974">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
